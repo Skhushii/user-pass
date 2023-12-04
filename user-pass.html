@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user-pass</title>
+</head>
+
+<body>
+
+    <center>
+
+        <h1 style="color: dimgrey;">User Login Form</h1>
+
+        <input type="text" id="userName" placeholder="user name"> <br> <br>
+        <input type="password" id="password" placeholder="password"><br> <br>
+        <button onclick="check()">Submit</button>
+
+        <p id="message"></p>  
+
+    </center>
+</body>
+
+</html>
+<script>
+
+    const check = () => {
+        let userName = document.getElementById("userName").value;
+        let password = document.getElementById("password").value;
+
+        if (userName == "khushi" && password == "ani@28") {
+            document.getElementById("message").innerHTML = "User is Registered!"
+            document.getElementById("message").style.color = "green";
+        } else {
+            document.getElementById("message").innerHTML = "User not found, please Authenticate!"
+            document.getElementById("message").style.color = "red";
+        }
+    }
+</script>
